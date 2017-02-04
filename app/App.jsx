@@ -13,6 +13,8 @@ store.subscribe(() => {
 });
 
 ReactDOM.render(
-		<Map />,
+	<Provider store={store}>
+		<Map />
+	</Provider>,
 	document.getElementById('app')
 );

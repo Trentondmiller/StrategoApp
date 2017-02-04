@@ -1,12 +1,12 @@
-export var addTodos = (todos) => {
+export var movePiece = (place) => {
   return {
     type: 'MOVE_PIECE',
-    todos
+    place
   };
 };
 
-export var toggleShowCompleted = () => {
+export var placePiece = () => {
   return {
-    type: 'TOGGLE_SHOW_COMPLETED'
+    type: 'PLACE_PIECE'
   };
 };

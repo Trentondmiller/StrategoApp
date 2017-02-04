@@ -67,7 +67,11 @@
 		console.log('New State', state);
 	});
 
-	ReactDOM.render(React.createElement(Map, null), document.getElementById('app'));
+	ReactDOM.render(React.createElement(
+		Provider,
+		{ store: store },
+		React.createElement(Map, null)
+	), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -27057,16 +27061,16 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var addTodos = exports.addTodos = function addTodos(todos) {
+	var movePiece = exports.movePiece = function movePiece(place) {
 	  return {
 	    type: 'MOVE_PIECE',
-	    todos: todos
+	    place: place
 	  };
 	};
 
-	var toggleShowCompleted = exports.toggleShowCompleted = function toggleShowCompleted() {
+	var placePiece = exports.placePiece = function placePiece() {
 	  return {
-	    type: 'TOGGLE_SHOW_COMPLETED'
+	    type: 'PLACE_PIECE'
 	  };
 	};
 
