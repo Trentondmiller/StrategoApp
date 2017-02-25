@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-app.use(express.static('./node_modules/bootstrap/dist'));
+//app.use(express.static('./node_modules/bootstrap/dist'));
 
 const PORT = process.env.PORT || 3000;
 

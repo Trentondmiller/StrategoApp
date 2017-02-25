@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   entry: './app/app.jsx',
@@ -10,13 +11,15 @@ module.exports = {
     root: __dirname,
     modulesDirectories: [
       'node_modules',
-      './app/components'
+      './app/components',
+      'Media'
     ],
     alias: {
       app: 'app',
       actions: 'app/actions/actions.jsx',
       reducers: 'app/reducers/reducers.jsx',
-      configureStore: 'app/store/configureStore.jsx'
+      configureStore: 'app/store/configureStore.jsx',
+      applicationStyles: 'app/styles/main.scss'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -27,7 +30,22 @@ module.exports = {
           query: {
             presets: ['react', 'es2015', 'stage-0']
           },
-          exclude: /(node_modules|bower_components|app-server.js)/
+          exclude: /(node_modules|bower_components)/,
+        },
+        {
+          test: /\.(jpg|png)$/,
+          loader: 'url-loader',
+          options: {
+            limit: 25000,
+          }
+        },
+        {
+          test: /\.scss/,
+          loader: 'style-loader!css-loader!sass-loader'
+        },
+        {
+          test: /\.css$/,
+          loader: 'style-loader!css-loader'
         }
       ]
     }

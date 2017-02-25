@@ -8,11 +8,9 @@ export var configure = (initialState = {}) => {
     movePiece: movePieceReducer,
     placePiece: placePieceReducer
   });
-
   var store = redux.createStore(reducer, initialState, redux.compose(
     redux.applyMiddleware(thunk),
     window.devToolsExtension ? window.devToolsExtension() : f => f
   ));
-
   return store;
 };

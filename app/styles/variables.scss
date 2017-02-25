@@ -1,0 +1,14 @@
+// Colors
+$white: #fff;
+$gray: #333;
+$light-gray: #fafafa;
+$light-text: #aaa;
+$orange:  #ffb200;
+
+// Container
+$container-background: $light-gray;
+$container-border-color: darken($container-background, 5%);
+$container-message-color: $light-text;
+
+$map-place-height: 50px;
+$map-place-width: 50px;
