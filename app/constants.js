@@ -1,0 +1,10 @@
+const constants = {
+	MOVE_PIECE: 'MOVE_PIECE',
+	SEND_MOVE: 'SEND_MOVE',
+	UPDATE_BOARD: 'UPDATE_BOARD',
+	CHANGE_TURN: 'CHANGE_TURN',
+	START_GAME: 'START_GAME',
+	END_GAME: 'END_GAME'
+}
+
+export default constants

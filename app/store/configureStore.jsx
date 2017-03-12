@@ -1,12 +1,13 @@
 import * as redux from 'redux';
 import thunk from 'redux-thunk';
 
-import {movePieceReducer, placePieceReducer} from 'reducers';
+import {piece, board, game} from 'reducers';
 
 export var configure = (initialState = {}) => {
   var reducer = redux.combineReducers({
-    movePiece: movePieceReducer,
-    placePiece: placePieceReducer
+    piece: piece,
+    board: board,
+    game: game
   });
   var store = redux.createStore(reducer, initialState, redux.compose(
     redux.applyMiddleware(thunk),
@@ -14,3 +15,6 @@ export var configure = (initialState = {}) => {
   ));
   return store;
 };
+
+
+

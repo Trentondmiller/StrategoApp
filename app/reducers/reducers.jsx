@@ -1,20 +1,32 @@
-var uuid = require('node-uuid');
+import C from '../constants'
 
-export var movePieceReducer = (state = '', action) => {
+export const piece = (state={}, action) => {
   switch (action.type) {
-    case 'MOVE_PIECE':
+    case C.MOVE_PIECE:
       return state;
     default:
       return state;
   }
 };
 
-export var placePieceReducer = (state = '', action) => {
+export const board = (state=[], action) => {
   switch (action.type) {
-    case 'PLACE_PIECE':
-      return !state;
+    case C.UPDATE_BOARD:
+      return action.board;
     default:
       return state;
   }
 };
 
+export const game = (state={}, action) => {
+  switch (action.type) {
+    case C.CHANGE_TURN:
+      return action.game;
+    case C.START_GAME:
+      return action.game;
+    case C.END_GAME:
+      return action.game;
+    default:
+      return state;
+  }
+};

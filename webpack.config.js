@@ -2,11 +2,16 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  entry: './app/app.jsx',
+  entry: './app/App.jsx',
   output: {
     path: __dirname,
     filename: './public/bundle.js'
   },
+   devServer: {
+        inline: true,
+        contentBase: './public/',
+        port: 3000
+    },
   resolve: {
     root: __dirname,
     modulesDirectories: [

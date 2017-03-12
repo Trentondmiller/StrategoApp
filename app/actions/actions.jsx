@@ -1,12 +1,14 @@
-export var movePiece = (place) => {
+
+export var movePiece = (move) => {
   return {
     type: 'MOVE_PIECE',
-    place
+    payload: move
   };
 };
 
-export var placePiece = () => {
+export var placePiece = (coordinates) => {
   return {
-    type: 'PLACE_PIECE'
+    type: 'PLACE_PIECE',
+    payload: coordinates
   };
 };
