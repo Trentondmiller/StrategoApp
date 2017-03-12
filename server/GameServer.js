@@ -28,8 +28,6 @@ io.sockets.on('connection', function (socket) {
 
     console.log("Connections: "  +  connections)
 
-
-
     socket.once('disconnect', function() {
         connections.splice(connections.indexOf(socket), 1);
         socket.disconnect();
