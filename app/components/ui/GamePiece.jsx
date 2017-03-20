@@ -4,7 +4,7 @@ const GamePiece = ({gamePiece}) =>
 {
   return ({
       <div>
-        <image src={gamePiece.src}/>
+        <image src={gamePiece.piece.image}/>
       </div>
     })
 }

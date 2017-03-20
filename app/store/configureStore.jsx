@@ -9,7 +9,7 @@ export var configure = (initialState = {}) => {
     board: board,
     game: game
   });
-  console.log("InitialState: " + JSON.stringify(initialState.board));
+  console.log("InitialState: " + JSON.stringify(initialState));
   var store = redux.createStore(reducer, initialState, redux.compose(
     redux.applyMiddleware(thunk),
     window.devToolsExtension ? window.devToolsExtension() : f => f
