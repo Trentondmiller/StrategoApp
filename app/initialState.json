@@ -1,0 +1,55 @@
+{
+	"title": "Stratego",
+	"board": 
+	[
+		{
+			"index": "0",
+			"gamePiece": 
+				{	
+					"owner": "Blue",
+					"piece": 
+						{
+							"image": "app/media/gamepieces/bluepieces/BlueFlag.jpg",
+							"rank" : "F"
+						}					
+				}
+		},
+		{
+			"index": "1",
+			"gamePiece": 
+				{	
+					"owner": "Blue",
+					"piece": 
+						{
+							"image": "app/media/gamepieces/bluepieces/BlueFlag.jpg",
+							"rank" : "F"
+						}					
+				}
+		},
+		{
+			"index": "2",
+			"gamePiece": 
+				{	
+					"owner": "Blue",
+					"piece": 
+						{
+							"image": "app/media/gamepieces/bluepieces/BlueFlag.jpg",
+							"rank" : "F"
+						}					
+				}
+		},
+		{
+			"index": "3",
+			"gamePiece": 
+				{	
+					"owner": "Blue",
+					"piece": 
+						{
+							"image": "app/media/gamepieces/bluepieces/BlueFlag.jpg",
+							"rank" : "F"
+						}					
+				}
+		}
+	]
+	
+}

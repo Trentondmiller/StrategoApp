@@ -3,15 +3,16 @@ var React = require('react');
 
 const Map = ({board, game, movePiece}) => 
 {
-  return ({
+	console.log({board});
+  return (
       <div>
-        board.map((mapSpace) => {
+        {board.map((mapSpace) => {
           return (
               <MapSpot key={mapSpace.index} mapSpace={mapSpace}/>
-            )
-        })
+            );
+        })}
       </div>
-    })
+    )
 }
 
 

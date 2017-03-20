@@ -1,14 +1,25 @@
+import C from '../constants.js'
 
-export var movePiece = (move) => {
-  return {
-    type: 'MOVE_PIECE',
+export const movePiece = (move) =>
+{(
+	type: C.MOVE_PIECE,
     payload: move
-  };
-};
+)}
 
-export var placePiece = (coordinates) => {
-  return {
-    type: 'PLACE_PIECE',
+export const placePiece = (coordinates) => 
+{(
+	type: C.PLACE_PIECE,
     payload: coordinates
-  };
-};
+)}
+
+export const addError = (message) => 
+({
+    type: C.ADD_ERROR,
+    payload: message
+})
+
+export const clearError = index => 
+({
+    type: C.CLEAR_ERROR,
+    payload: index
+})

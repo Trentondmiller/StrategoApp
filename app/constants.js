@@ -4,7 +4,9 @@ const constants = {
 	UPDATE_BOARD: 'UPDATE_BOARD',
 	CHANGE_TURN: 'CHANGE_TURN',
 	START_GAME: 'START_GAME',
-	END_GAME: 'END_GAME'
+	END_GAME: 'END_GAME',
+	ADD_ERROR: 'ADD_ERROR',
+	CLEAR_ERROR: 'CLEAR_ERROR'
 }
 
 export default constants
