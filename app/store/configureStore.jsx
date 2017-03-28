@@ -1,21 +1,35 @@
-import * as redux from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 
-import {piece, board, game} from 'reducers';
+import gameReducers from '../reducers/reducers';
 
-export var configure = (initialState = {}) => {
-  var reducer = redux.combineReducers({
-    piece: piece,
-    board: board,
-    game: game
-  });
-  console.log("InitialState: " + JSON.stringify(initialState));
-  var store = redux.createStore(reducer, initialState, redux.compose(
-    redux.applyMiddleware(thunk),
-    window.devToolsExtension ? window.devToolsExtension() : f => f
-  ));
-  return store;
-};
+const consoleMessages = store => next => action => {
+
+  let result
+
+  console.groupCollapsed(`dispatching action => ${action.type}`)
+  console.log('State:', store.getState().loggedIn)
+  result = next(action)
+
+  let {loggedIn, errors} = store.getState()
+
+  console.log(`
+
+    loggedIn: ${loggedIn}
+    errors: ${errors.length}
+
+  `)
+
+  console.groupEnd()
+
+  return result
+
+}
+
+export default (initialState = {}) => {
+  console.log("InitialState: " + JSON.stringify(initialState))
+  return applyMiddleware(thunk,consoleMessages)(createStore)(gameReducers,initialState)
+}
 
 
 

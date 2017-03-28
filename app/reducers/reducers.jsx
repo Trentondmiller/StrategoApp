@@ -1,4 +1,5 @@
 import C from '../constants'
+import { combineReducers } from 'redux'
 
 export const errors = (state=[], action) => {
   switch(action.type) {
@@ -12,7 +13,7 @@ export const errors = (state=[], action) => {
     default: 
       return state
   }
-};
+}
 
 export const piece = (state={}, action) => {
   switch (action.type) {
@@ -21,7 +22,7 @@ export const piece = (state={}, action) => {
     default:
       return state;
   }
-};
+}
 
 export const board = (state=[], action) => {
   switch (action.type) {
@@ -30,7 +31,7 @@ export const board = (state=[], action) => {
     default:
       return state;
   }
-};
+}
 
 export const game = (state={}, action) => {
   switch (action.type) {
@@ -43,4 +44,12 @@ export const game = (state={}, action) => {
     default:
       return state;
   }
-};
+}
+
+
+export default combineReducers({
+    piece,
+    board,
+    game,
+    errors
+  })
